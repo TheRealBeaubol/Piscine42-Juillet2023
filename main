@@ -1,0 +1,332 @@
+int	main(void)
+{
+	ft_print_reverse_alphabet();
+	return (0);
+}
+
+int	main (void)
+{
+	int a;
+	int *ptr;
+	
+	ptr =&q;
+	ft_ft(ptr);
+	printf("%d", a);
+	return (0);
+}
+
+int	main(void)
+{
+	int a;
+	int b;
+	a=2;
+	b=5;
+	ft_swap(&a, &b);
+	printf("%d %d", a, b);
+}
+
+int	main(void)
+{
+	int	tab[6] = {1, 2, 3, 4, 5, 6};
+	ft_rev_int_tab(tab, 5);
+	printf("%d %d %d %d %d %d ", tab[0], tab[1], tab[2], tab[3], tab[4], tab[5]);
+}
+
+int	main(void)
+{
+	int	tab[6] = {5, 200, 251, 63, 9976, 94};
+
+	ft_sort_int_tab(tab, 6);
+	printf("%d %d %d %d %d %d ", tab[0], tab[1], tab[2], tab[3], tab[4], tab[5]);
+}
+
+int	main(void)
+{	
+	char str1[1000];
+	char str2[1000] = "Bonjour";
+	printf("%s", ft_strncpy(str1, str2, 3));
+}
+
+int main()
+{
+    int    i;
+
+    i = 0;
+    while (i < 128)
+    {
+        ft_putstr_non_printable(&i);
+        printf("\n");
+        i++;
+    }
+}
+
+#include <stdio.h>
+int	main(void)
+{
+	printf("%d",ft_strcmp("coucou", "couco"));
+}
+
+#include <unistd.h>
+int main()
+{
+	char	str[]="couCOU!@#123";
+	write(1, ft_strupcase(str), 12);
+}
+
+
+
+#include <unistd.h>
+int	main(void)
+{
+	char	a[]="couCOU";
+	write(1, ft_strlowcase(a),6);
+}
+
+
+
+#include <stdio.h>
+int main()
+{
+	char	str[]="couCOUQUAWZz!@#$%^&*()123456789a";
+	printf("%d", ft_str_is_alpha(str));
+}
+
+
+#include <stdio.h>
+int	main(void)
+{
+	char	a[] = "coucou";
+	char	b[] = "salut";
+	printf("%s",ft_strcat(a,b));
+}
+
+
+
+#include <stdio.h>
+int	main(void)
+{
+	char	a[] = "coucou";
+	char	b[] = "salut";
+	printf("%s",ft_strncat(a,b,5));
+}
+
+
+
+int	main(void)
+{
+	char	a[] = "\n   -+-+--1234567";
+
+	printf("%d", ft_atoi(a));
+}
+
+
+#include <stdio.h>
+
+int	main()
+{
+	int	a;
+	char	base10[] = "0123456789";
+	char	base16[] = "0123456789abcdef";
+	char	base2[] = "01";
+	char	base8[] = "poneyvif";
+
+	a = -16;
+	ft_putnbr_base(a, base10);
+	printf("%s","\n");
+	ft_putnbr_base(a, base8);
+	printf("%s","\n");
+	ft_putnbr_base(a, base2);
+	printf("%s","\n");
+	ft_putnbr_base(a, base16);
+}
+
+#include <stdio.h>
+
+int	main()
+{
+	char	a[] = "    \n  ---++--100";
+	char	base10[] = "0123456789";
+	char	base16[] = "0123456789abcdef";
+	char	base2[] = "01";
+	char	base8[] = "poneyvif";
+
+	printf("%d",ft_atoi_base(a, base2));
+	printf("%s","\n");
+	printf("%d",ft_atoi_base(a, base8));
+	printf("%s","\n");
+	printf("%d",ft_atoi_base(a, base10));
+	printf("%s","\n");
+	printf("%d",ft_atoi_base(a, base16));
+}
+
+#include <stdio.h>
+int	main(int ac, char **av)
+{
+	char *str;
+	
+	(void)ac;
+	str = ft_strdup(av[1]);
+	printf("%s", str);
+}
+
+
+int	main(void)
+{
+	int	i;
+	int	j;
+	int	*tab;
+
+	i = 20;
+	j = 23;
+	tab = ft_range(i, j);
+	printf("%d %d %d %d", tab[20], tab[21], tab[22], tab[23]);
+	i = 0;
+	j = 10;
+	tab = ft_range(i, j);
+	printf("%d %d %d %d %d %d %d %d %d %d %d", tab[0], tab[1], tab[2], tab[3], tab[4], tab[5], tab[6], tab[7], tab[8], tab[9], tab[10]);
+}
+
+
+#include <stdio.h>
+int	main(void)
+{
+	int	*range;
+
+	printf("%d", ft_ultimate_range(&range, 0, 1));
+}
+
+#include <stdio.h>
+int	main(void)
+{
+	int	size;
+	char	*strs[3] = {"coucou ", "salut ", "hello"};
+	char	*sep;
+
+	size = 3;
+	sep = "\n";
+	printf("%s", ft_strjoin(size, strs, sep));
+}
+
+
+
+int	main(int ac, char **av)
+{
+	char *sep ="//////";
+	
+	printf("%s", ft_strjoin(5, av, sep));
+}
+
+#include <stdio.h>
+int	main(void)
+{
+	char	*a;
+	char	*b;
+	char	**split;
+
+	a = "couc";
+	b = "oc";
+	split = ft_split(a, b);
+	printf("%s %s %s %s", split[0], split[1], split[2], split[3]);	
+}
+
+
+
+
+
+#include <stdio.h>
+int	mai3n(void)
+{
+	char	*i;
+	char	*j;
+	char	**tab;
+	int x;
+
+	i = "bienbienbienbien-lolololo";
+	j = "bo";
+	tab = ft_split(i, j);
+	x = 0;
+	while(tab[x])
+	{
+		printf("tab[%d] = %s\n", x, tab[x]);
+		x++;
+	}
+	return (0);
+}
+
+
+
+int	main(int ac, char **av)
+{
+	t_stock_str	*tab;
+
+	tab = ft_strs_to_tab(ac, av);
+	ft_show_tab(tab);
+	return(0);
+}
+
+
+#include <stdio.h>
+int	main(void)
+{
+	char	*i;
+	char	*j;
+	char	**tab;
+	int x;
+
+	i = "   ";
+	j = "aFy 8YRs";
+	tab = ft_split(i, j);
+	x = 0;
+	while(tab[x])
+	{
+		printf("tab[%d] = %s\n", x, tab[x]);
+		x++;
+	}
+	return (0);
+}
+
+
+
+#include <stdio.h>
+int	main(void)
+{
+	char	*i;
+	char	*j;
+	char	**tab;
+	int x;
+
+	i = "ttt";
+	j = "ttt";
+	tab = ft_split(i, j);
+	x = 0;
+	while(tab[x])
+	{
+		printf("tab[%d] = %s\n", x, tab[x]);
+		x++;
+	}
+	return (0);
+}
+
+
+int	ft_strlen(char *str)
+{
+	int	n;
+
+	n = 0;
+	while (str[n] != '\0')
+		++n;
+	return (n);
+}
+
+int	main(void)
+{
+	int	i;
+	//char	*str2 = "coucou\n";
+	char	*str = "Bonjour les aminches\t\n\tc\a est fou\ttout\tce qu on peut faire avec\t\n\tprint_memory\n\n\n\tlol.lol\n \0";
+
+	i = ft_strlen(str);
+	ft_print_memory(str, i);
+	/*i = ft_strlen(str2);
+	ft_print_memory(str2, i);*/
+	return(0);
+}
